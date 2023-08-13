@@ -41,14 +41,14 @@ const TodoApp = () => {
         onKeyPress={handleKeyPress}
         value={input}
       />
-      <button id="add-button" onClick={addTodo}>
+      <button id="button" onClick={addTodo}>
         Add Todo
       </button>
       <ul id="todo-list">
-        // Map over todos and render each one in a list item
         {todos.map((todo, index) => (
-          <li key={index} onClick={() => deleteTodo(index)}>
+          <li key={index}>
             {todo}
+            <button id="button" onClick={() => deleteTodo(index)}>delete</button>
           </li>
         ))}
       </ul>
